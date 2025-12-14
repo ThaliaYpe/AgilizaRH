@@ -40,4 +40,28 @@ Orientador: Prof. Lázaro Filho – UNIVAG
 ---
 Curso: Engenharia de Software
 ---
+---
+## Interface de Login Funcionário/RH
+<img width="368" height="332" alt="login" src="https://github.com/user-attachments/assets/d865120d-4386-4a5a-8be3-970536168474" />
 
+## Interface Funcionários
+<img width="913" height="425" alt="iniciofuncionario" src="https://github.com/user-attachments/assets/5775ccc0-c66f-4434-a787-ee39b75fb32f" />
+
+<img width="921" height="420" alt="abrirnovasolicitacao" src="https://github.com/user-attachments/assets/8e6b6d0a-ef31-48dc-a101-cd44347b7949" />
+
+<img width="677" height="600" alt="tiposolicitacao" src="https://github.com/user-attachments/assets/0a51dc47-693f-427e-b470-ea07c545b9a6" />
+
+<img width="700" height="609" alt="datas" src="https://github.com/user-attachments/assets/8833b241-ed4e-4817-b4e9-05e53b7dbd16" />
+
+<img width="918" height="554" alt="suporte" src="https://github.com/user-attachments/assets/a25fd0aa-1aaf-40df-8144-2f815dee580b" />
+
+## Interface Analista de RH
+<img width="916" height="276" alt="rhsolicitacoes" src="https://github.com/user-attachments/assets/8c49daf3-c76f-4d6f-9c99-1257aa62a5af" />
+
+<img width="918" height="575" alt="detalhesolicitacao" src="https://github.com/user-attachments/assets/f88841d1-601e-47a5-a4f8-a48b96bd2847" />
+
+<img width="911" height="574" alt="atestados" src="https://github.com/user-attachments/assets/f788759f-02d8-403b-bf96-db97f6355bf9" />
+
+<img width="914" height="572" alt="folhapagamento" src="https://github.com/user-attachments/assets/d0dbd71f-9efd-4706-92e6-b5332740e11f" />
+
+<img width="917" height="576" alt="salarios" src="https://github.com/user-attachments/assets/23958b61-c20b-4158-abfb-720146d2d730" />
