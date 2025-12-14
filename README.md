@@ -60,6 +60,8 @@ Curso: Engenharia de Software
 
 <img width="918" height="575" alt="detalhesolicitacao" src="https://github.com/user-attachments/assets/f88841d1-601e-47a5-a4f8-a48b96bd2847" />
 
+<img width="919" height="578" alt="lembreteferias" src="https://github.com/user-attachments/assets/8bb316d1-50c8-4d7b-b229-3e58f25d1cef" />
+
 <img width="911" height="574" alt="atestados" src="https://github.com/user-attachments/assets/f788759f-02d8-403b-bf96-db97f6355bf9" />
 
 <img width="914" height="572" alt="folhapagamento" src="https://github.com/user-attachments/assets/d0dbd71f-9efd-4706-92e6-b5332740e11f" />
