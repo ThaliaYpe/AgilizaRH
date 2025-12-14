@@ -1,0 +1,87 @@
+CREATE TABLE usuario (
+    id_user INT AUTO_INCREMENT PRIMARY KEY,
+    login_user VARCHAR(100) NOT NULL UNIQUE,
+    senha_user VARCHAR(255) NOT NULL,
+    ativo_user BOOLEAN NOT NULL DEFAULT TRUE,
+    data_criacao_user TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE funcionarios (
+    id_func INT AUTO_INCREMENT PRIMARY KEY,
+    nome_func VARCHAR(100) NOT NULL,
+    cpf_func VARCHAR(11) NOT NULL UNIQUE,
+    id_user INT NOT NULL UNIQUE,
+    CONSTRAINT fk_func_user
+        FOREIGN KEY (id_user)
+        REFERENCES usuario(id_user)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+CREATE TABLE tipo_solicitacao (
+    id_tipo_solicitacao INT AUTO_INCREMENT PRIMARY KEY,
+    nome_tipo_solicitacao VARCHAR(100) NOT NULL,
+    descricao_tipo_solicitacao VARCHAR(255)
+);
+
+CREATE TABLE solicitacao (
+    id_solicitacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    id_tipo_solicitacao INT NOT NULL,
+    mensagem_solicitacao VARCHAR(255),
+    data_solicitacao DATE NOT NULL,
+    
+    FOREIGN KEY (id_user)
+        REFERENCES usuario(id_user)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (id_tipo_solicitacao)
+        REFERENCES tipo_solicitacao(id_tipo_solicitacao)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+CREATE TABLE fluxo_aprovacao (
+    id_fluxo INT AUTO_INCREMENT PRIMARY KEY,
+    id_solicitacao INT,
+    id_funcionario INT,
+    status_solicitacao VARCHAR(255),
+    data_aprovacao_solicitacao DATE,
+    observacao_solicitacao VARCHAR(255),
+
+    FOREIGN KEY (id_solicitacao)
+        REFERENCES solicitacao(id_solicitacao)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE,
+
+    FOREIGN KEY (id_funcionario)
+        REFERENCES funcionarios(id_func)  
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
+CREATE TABLE documento (
+    id_documento INT AUTO_INCREMENT PRIMARY KEY,
+    id_solicitacao INT NOT NULL,
+    tipo_documento VARCHAR(255),
+    caminho_documento VARCHAR(255),
+    tamanho_documento VARCHAR(255),
+    
+    CONSTRAINT fk_documento_solicitacao
+        FOREIGN KEY (id_solicitacao)
+        REFERENCES solicitacao(id_solicitacao)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+CREATE TABLE usuarios_detalhes (
+    id_usuario_detalhe INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    cpf VARCHAR(11) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    endereco VARCHAR(255),
+    data_nascimento DATE,
+    cargo VARCHAR(100),
+    salario DECIMAL(10,2),
+
+    FOREIGN KEY (id_user) REFERENCES usuario(id_user)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
